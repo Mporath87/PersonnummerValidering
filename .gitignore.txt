@@ -1,0 +1,3 @@
+# Ignorera bin och obj mappar
+**/bin/
+**/obj/
