@@ -1,7 +1,5 @@
 # PersonnummerValidering
 
-# PersonnummerValidering
-
 ## Beskrivning
 Detta projekt är en konsolapplikation skriven i C# som verifierar om ett givet svenskt personnummer är giltigt. Applikationen är byggd för att hantera korrekt formaterade personnummer enligt svenska regler.
 
