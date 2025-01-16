@@ -8,9 +8,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C860586F-FB0A-4090-B2E1-771E2A7C0ED4}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore.txt = .gitignore.txt
+		..\..\..\Desktop\PersonnummerValidering\.github\workflows\ci.yml = ..\..\..\Desktop\PersonnummerValidering\.github\workflows\ci.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnummerValideringTest", "PersonnummerValideringTest\PersonnummerValideringTest.csproj", "{533F4816-86ED-4C36-B0C6-54DCEFCA6C03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{B8D93361-E671-489A-9997-CA7D8160B6D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{E2FABC39-089B-46A9-AEDC-51DCAC99E842}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +34,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E2FABC39-089B-46A9-AEDC-51DCAC99E842} = {B8D93361-E671-489A-9997-CA7D8160B6D6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E7C34A5-C071-4FF8-8190-9FEB19006A6D}

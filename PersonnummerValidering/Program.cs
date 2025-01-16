@@ -1,15 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PersonnummerValidering
+class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        Console.WriteLine("Välkommen till Personnummerkontrollen!");
+        Console.WriteLine("Skriv in ett svenskt personnummer (10 eller 12 siffror):");
+
+        string personnummer = Console.ReadLine();
+
+        if (PersonnummerValidering.PersonnummerValidator.ValideraPersonnummer(personnummer))
         {
+            Console.WriteLine("Personnumret är giltigt!");
+        }
+        else
+        {
+            Console.WriteLine("Personnumret är ogiltigt!");
         }
     }
 }
