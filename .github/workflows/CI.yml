@@ -1,0 +1,36 @@
+name: .NET Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Check out repository code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Set up .NET environment
+    - name: Set up .NET SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '9.0.x' # Ensure you are using .NET 9
+
+    # Restore dependencies
+    - name: Restore dependencies
+      run: dotnet restore
+
+    # Build the solution
+    - name: Build the solution
+      run: dotnet build --no-restore --configuration Release
+
+    # Run tests
+    - name: Run tests
+      run: dotnet test --no-build --verbosity normal
