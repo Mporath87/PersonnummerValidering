@@ -1,0 +1,30 @@
+name: .NET Framework CI
+
+on:
+  pull_request:
+    branches:
+      
+'*'
+
+jobs:
+  build:
+    runs-on: windows-latest  # Use a Windows runner for .NET Framework
+
+    steps:
+    
+uses: actions/checkout@v2
+name: Setup .NET Framework 4.7.2
+run: |
+  choco install dotnetframework --version=4.7.2  # Install .NET Framework 4.7.2
+
+name: Restore dependencies
+run: nuget restore YourSolution.sln  # Use nuget for .NET Framework projects
+
+    
+name: Build
+    run: msbuild YourSolution.sln /p:Configuration=Release  # Build with MSBuild
+
+    
+name: Run Unit Tests
+    run: |
+      vstest.console YourTestProject.dll  # Run tests with VSTest
