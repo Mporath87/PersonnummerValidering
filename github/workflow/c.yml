@@ -18,13 +18,13 @@ run: |
   choco install dotnetframework --version=4.7.2  # Install .NET Framework 4.7.2
 
 name: Restore dependencies
-run: nuget restore YourSolution.sln  # Use nuget for .NET Framework projects
+run: nuget restore PersonnummerValidering.sln  # Use nuget for .NET Framework projects
 
     
 name: Build
-    run: msbuild YourSolution.sln /p:Configuration=Release  # Build with MSBuild
+    run: msbuild PersonnummerValidering.sln /p:Configuration=Release  # Build with MSBuild
 
     
 name: Run Unit Tests
     run: |
-      vstest.console YourTestProject.dll  # Run tests with VSTest
+      vstest.console UnitTest1.dll  # Run tests with VSTest
